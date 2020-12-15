@@ -1,0 +1,37 @@
+{
+    "policy": {
+        "name": "policy13_WAF_API_policy",
+        "description": "Arcadia API",
+        "template": {
+            "name": "POLICY_TEMPLATE_API_SECURITY"
+        },
+        "enforcementMode": "blocking",
+        "server-technologies": [
+            {
+                "serverTechnologyName": "MySQL"
+            },
+            {
+                "serverTechnologyName": "Unix/Linux"
+            },
+            {
+                "serverTechnologyName": "MongoDB"
+            }
+        ],
+        "signature-settings": {
+            "signatureStaging": false
+        },
+        "policy-builder": {
+            "learnOnlyFromNonBotTraffic": false
+        },
+		"general" : {
+               "properties" : {
+                  "allowedResponseCodes" : "404"
+                  }
+				  },
+        "open-api-files": [
+            {
+            "link": "https://api.swaggerhub.com/apis/F5EMEASSA/Arcadia-OAS3/2.0.0-oas3"
+            }
+        ]
+    }
+}
